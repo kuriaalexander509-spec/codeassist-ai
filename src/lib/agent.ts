@@ -1,8 +1,8 @@
 import { Agent, sandboxTools, webSearch } from '@blinkdotnew/sdk'
 
-const readOnlyTools = sandboxTools.filter(tool =>
-  ['read_file', 'list_dir', 'grep', 'glob_file_search', 'get_host'].includes(tool.name)
-)
+const readOnlyToolNames = ['read_file', 'list_dir', 'grep', 'glob_file_search', 'get_host']
+
+const readOnlyTools = sandboxTools.filter(tool => readOnlyToolNames.includes(tool))
 
 export const askAgent = new Agent({
   model: 'google/gemini-3-flash',

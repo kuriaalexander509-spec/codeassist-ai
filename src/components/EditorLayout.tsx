@@ -2,7 +2,6 @@ import { useState } from 'react'
 import type { Sandbox } from '@blinkdotnew/sdk'
 import ChatPanel from './ChatPanel'
 import PreviewPanel from './PreviewPanel'
-import { codingAgent, askAgent } from '../lib/agent'
 
 export default function EditorLayout({ sandbox }: { sandbox: Sandbox }) {
   const [mode, setMode] = useState<'ask' | 'agent'>('agent')
