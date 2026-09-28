@@ -16,7 +16,6 @@ export default function PreviewPanel({ previewUrl }: { previewUrl: string }) {
 
   const handleRefresh = () => {
     setIsRefreshing(true)
-    const url = previewUrl
     setShowIframe(false)
     setTimeout(() => {
       setShowIframe(true)
